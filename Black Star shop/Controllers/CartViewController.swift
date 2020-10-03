@@ -17,8 +17,6 @@ class CartViewController: UIViewController {
     @IBOutlet weak var checkOutButton: CustomButton!
     @IBOutlet weak var tabelView: UITableView!
     
-   // var alertController : CartDeliteAlertController!
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -40,7 +38,6 @@ class CartViewController: UIViewController {
 
         tabelView.delegate = self
         tabelView.dataSource = self
-  
     }
     
 }
