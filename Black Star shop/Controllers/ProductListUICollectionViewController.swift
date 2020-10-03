@@ -14,7 +14,7 @@ class ProductListUICollectionViewController: UICollectionViewController {
     
     let itemPerRow : CGFloat = 2
     
-    let sectionInserts = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    let sectionInserts = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -105,11 +105,11 @@ extension ProductListUICollectionViewController : UICollectionViewDelegateFlowLa
         
           let frameVC = collectionView.frame
          
-         let spacingBetwin: CGFloat = 20 * 3
+         let spacingBetwin: CGFloat = 10 * 3
          let availableWidth = frameVC.width - spacingBetwin
          let widthPerItem = availableWidth / 2
 
-         return CGSize(width: widthPerItem, height: 215)
+         return CGSize(width: widthPerItem, height: 220)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
