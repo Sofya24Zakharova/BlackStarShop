@@ -5,5 +5,5 @@
 * REST API
 * UITableView, UICollectionView
 * CoreData
-* UITabBarController, UINavigationBarController
+* UITabBarController, UINavigationController
 * Navigation, segues
