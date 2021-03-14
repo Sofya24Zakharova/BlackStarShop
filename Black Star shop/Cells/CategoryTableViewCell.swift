@@ -37,10 +37,10 @@ class CategoryTableViewCell: UITableViewCell {
         
         //categoryImage.image = categoryImage.fetchImage(from: Urls.urlForimages+"\(object.image)")
         
-        //delegate?.getImage(image: true)
+ 
+        categoryImage.fetchImage(from: Urls.urlForimages+"\(object.image)")
         
-       categoryImage.image =  categoryImage.fetchImage(from: Urls.urlForimages+"\(object.image)")
-        delegate?.reloadCell(at: index)
+       // delegate?.reloadCell(at: index)
         
         activityIndicator.stopAnimating()
         

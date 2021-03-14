@@ -12,6 +12,5 @@ class SliderCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var productImageView: UIImageView!
     
-    var image : UIImage! 
     
 }

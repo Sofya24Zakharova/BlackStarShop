@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // MARK: - Core Data stack
-
+/*
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
@@ -61,6 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
+ 
     
     func applicationWillTerminate(_ application: UIApplication) {
         saveContext()
@@ -81,6 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    */
 
 }
 

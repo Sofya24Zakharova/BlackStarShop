@@ -16,7 +16,7 @@ class SizeWindowView: UIView {
 
     var tableView = UITableView()
        var data: Product?
-       var color: String = ""
+      // var color: String = ""
        var cellHeight: CGFloat = 50
        var delegate: SizeWindowDelegate?
        private var newObject = true
@@ -25,7 +25,6 @@ class SizeWindowView: UIView {
            super.layoutSubviews()
         
            tableView.frame = bounds
-           backgroundColor = .white
           
            configureSubviews()
        }

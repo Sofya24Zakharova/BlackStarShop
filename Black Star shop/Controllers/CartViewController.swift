@@ -20,12 +20,12 @@ class CartViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let cartProducts1 = CoreDataManager.shared.fetchCartProduct()
-        let reversedProducts  = Array(cartProducts1.reversed())
-        cartProducts = reversedProducts
+        cartProducts = CoreDataManager.shared.fetchCartProduct().reversed()
+        //cartProducts  = Array(cartProducts1.reversed())
  
         tabelView.reloadData()
         totalPriceLabel.text = "\(Int(getTotalPrice()))₽"
+        
         
     }
     
@@ -40,6 +40,8 @@ class CartViewController: UIViewController {
         tabelView.dataSource = self
     }
     
+    @IBAction func checkOutButtonTapped(_ sender: UIButton) {
+    }
 }
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource{

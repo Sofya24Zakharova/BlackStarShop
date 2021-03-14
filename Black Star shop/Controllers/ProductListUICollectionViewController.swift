@@ -108,7 +108,7 @@ extension ProductListUICollectionViewController : UICollectionViewDelegateFlowLa
          let spacingBetwin: CGFloat = 10 * 3
          let availableWidth = frameVC.width - spacingBetwin
          let widthPerItem = availableWidth / 2
-         let hightPerItem = widthPerItem * 1.3
+         let hightPerItem = widthPerItem * 1.5
 
          return CGSize(width: widthPerItem, height: hightPerItem)
     }

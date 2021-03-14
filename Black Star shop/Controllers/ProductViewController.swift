@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol AddedToCartDelegate{
-    func eddedToCart(is: Bool)
-}
-
 class ProductViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -28,8 +24,6 @@ class ProductViewController: UIViewController {
     let addedToCartView = UIView()
     
     let sizeWindow = SizeWindowView()
-    
-    var delegate : AddedToCartDelegate?
     
     let sizeTableViewHight : CGFloat = 200
     
@@ -70,7 +64,7 @@ class ProductViewController: UIViewController {
 
         pageControl.numberOfPages = productImages.count
         
-        sizeWindow.data = product
+        //sizeWindow.data = product
         
         sizeWindow.delegate = self
         
@@ -85,6 +79,7 @@ class ProductViewController: UIViewController {
     
     @IBAction func addToCartTapped(_ sender: Any) {
         
+        sizeWindow.data = product
         imageToSave = productImages.first
         
         transparentView.backgroundColor = UIColor.black
@@ -155,7 +150,7 @@ extension ProductViewController : UICollectionViewDelegate, UICollectionViewData
         
         return arrayOfImages
     }
-    private  func showPopUpView() {
+    private func showPopUpView() {
         
         view.addSubview(popUpWindow)
         UIView.animate(withDuration: 1, animations: {
@@ -175,7 +170,7 @@ extension ProductViewController : UICollectionViewDelegate, UICollectionViewData
 extension ProductViewController: SizeWindowDelegate {
     func didSelectSize(product: Product, size: String, isTapped: Bool) {
         
-        if isTapped {
+       // if isTapped {
             UIView.animate(withDuration: 0.5, delay: 0.1, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
                 self.sizeWindow.frame = CGRect(x: 0, y: self.screenSize.height, width: self.screenSize.width, height: self.sizeTableViewHight)
                 self.transparentView.alpha = 0
@@ -185,10 +180,8 @@ extension ProductViewController: SizeWindowDelegate {
             
             CoreDataManager.shared.saveProductToCart(with: product, size: size, image: img)
             
-            delegate?.eddedToCart(is: true)
-            
             showPopUpView()
-        }
+        //}
     }
     
     
